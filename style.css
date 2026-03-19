@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: linear-gradient(#dff3ff, #ffffff);
+  font-family: sans-serif;
+  cursor: url('assets/pointer.png'), auto;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px;
+}
+
+.channel {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.channel:hover {
+  transform: scale(1.1);
+}
+
+.channel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.channel-expanded {
+  animation: zoom 0.4s ease;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.5); }
+  to { transform: scale(1); }
+}
